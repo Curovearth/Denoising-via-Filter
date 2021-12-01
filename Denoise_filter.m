@@ -1,6 +1,6 @@
-clearvars;
+clc;clear all;
 close all;
-[x,fs]=audioread('C:\Users\iwill\Downloads\sample-cut.wav'); %reading the audio signal
+[x,fs]=audioread('C:\Users\iwill\Desktop\github\5_DSP audio DA\Denoising-via-Filter\input-audio.wav'); %reading the audio signal
 
 t = [1/fs:1/fs:length(x)/fs];
 figure(1)
@@ -115,5 +115,7 @@ title('Final Output');
 ylabel('Signal');
 xlabel('Time');
 
-p = audioplayer(fOut3, fs);
+p = audioplayer(fOut3, fs);%Playing the output audio 
 play(p);
+
+%In order to stop the audio ">>stop(p)" on to the command window
